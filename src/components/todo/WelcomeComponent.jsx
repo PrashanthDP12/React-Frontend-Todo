@@ -16,7 +16,7 @@ function WelcomeComponent() {
 
     function callHelloWorldRestApi(){
         console.log('called')
-        retrieveHelloWorldPathVariable('dpp') 
+        retrieveHelloWorldPathVariable('dpp', authContext.token) 
         .then( (response) => successfulResponse(response) )
         .catch ( (error) => errorResponse(error) )
         .finally ( () => console.log('cleanup') )
